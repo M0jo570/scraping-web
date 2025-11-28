@@ -18,7 +18,7 @@ async function scrapeAnimeList() {
       
       if (!link || !title) return;
       
-      const slug = link.split("/anime")[1]?.replace("/", "") || null;
+      const slug = link.split("/anime/")[1]?.replace("/", "") || null;
       
       results.push({
         title,
@@ -28,7 +28,7 @@ async function scrapeAnimeList() {
     });
   });
   
-  console.log("jumlah anime yang ditemukan di endpoint /api/anime/list:", results.length);
+
 
   return results;
   

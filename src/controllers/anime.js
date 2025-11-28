@@ -58,36 +58,49 @@ async function getSearch(req, res) {
 
 async function getAnimeList(req, res) {
   try {
-    
-    let { filter } =  req.query;
-    filter = filter ?String(filter).trim().toUpperCase() : null;
-    
+  
+    let { filter } = req.query;
+    filter = filter ? String(filter).trim().toUpperCase() : null;
+
     const data = await scrapeAnimeList();
-    
+
+  
     if (!filter) {
+      console.log(`[ANIME LIST] Tanpa filter → total: ${data.length}`);
+
       return res.json({
-        status:true,
-        total:data.length,
-        filter:null,
+        status: true,
+        total: data.length,
+        filter: null,
         data
       });
     }
-    
-    let filtered = null;
-    
-    if (filter == "#" || /^\d$/.test(filter)) {
+
+  
+    let filtered;
+
+  
+    if (filter === "#" || /^\d$/.test(filter)) {
       filtered = data.filter(a => /^\d/.test(a.title));
-    } else {
-      filtered = data.filter(a => a.title.toUpperCase().startsWith(filter));
+    } 
+  
+    else {
+      filtered = data.filter(a =>
+        a.title.toUpperCase().startsWith(filter)
+      );
     }
-    res.json({
-      status:true,
+
+    console.log(`[ANIME LIST] Hasil setelah filter "${filter}": ${filtered.length}`);
+
+    return res.json({
+      status: true,
       filter,
       total: filtered.length,
       data: filtered,
     });
+
   } catch (err) {
-    res.status(500).json({ status:false, eror:err.message });
+    res.status(500).json({ status: false, eror: err.message });
   }
 }
 

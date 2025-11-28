@@ -36,11 +36,12 @@ async function scrapeDetail(slug) {
     const title = $(el).find("a").text().trim();
     const link = $(el).find("a").attr("href") || null;
     const tanggal = $(el).find(".zeebr").text().trim();
-
-    episodes.push({ title, link, tanggal });
+    const slug = link.split("/episode/")[1]?.replace("/", "") || null;
+    
+    episodes.push({ title, link, tanggal, slug });
   });
   
-  console.log("jumlah episode yang ditemukan di endpoint /api/anime/detail/:slug/", slug,":", episodes.length);
+  console.log(`[DETAIL] ${slug} → ${episodes.length} episode ditemukan`);
 
   return {
     slug,

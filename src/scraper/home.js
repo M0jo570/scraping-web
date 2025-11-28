@@ -30,8 +30,6 @@ async function scrapeHome() {
     });
   });
   
-  console.log("jumlah anime yang ditemukan di endpoint /api/anime/home:", result.length)
-
   return result;
 }
 

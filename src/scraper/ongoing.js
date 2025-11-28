@@ -28,8 +28,8 @@ async function scrapeOngoing(page = 1) {
     });
   });
   
-  console.log("jumlah anime yang ditemukan di endpoint /api/anime/ongoing:", result.length)
-
+  console.log(`[ONGOING] page ${page} → ${result.length} anime`);
+  
   return result;
 }
 

@@ -28,7 +28,7 @@ async function scrapeComplete(page = 1) {
     });
   });
   
-  console.log("jumlah anime hang ditemukan di endpoint /api/anime/complete:", results.length);
+  console.log(`[COMPLETE] page ${page} → ${results.length} anime ditemukan`);
 
   return results;
 }

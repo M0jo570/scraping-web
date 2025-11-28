@@ -36,7 +36,7 @@ async function scrapeSearch(query) {
     });
   });
   
-  console.log("jumlah anime yang ditemukan di endpoint /api/anime/search:", results.length)
+  console.log(`[SEARCH] Query "${query}" → ${results.length} hasil`)
 
   return results;
 }
