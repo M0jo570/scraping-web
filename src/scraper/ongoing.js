@@ -1,8 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { BASE_URL } = require("../config");
 
 async function scrapeOngoing(page = 1) {
-  const url = `https://otakudesu.best/ongoing-anime/page/${page}/`;
+  const url = `${BASE_URL}/ongoing-anime/page/${page}/`;
 
   const { data } = await axios.get(url);
   const $ = cheerio.load(data);
@@ -28,7 +29,7 @@ async function scrapeOngoing(page = 1) {
     });
   });
   
-  console.log(`[ONGOING] page ${page} → ${result.length} anime`);
+  console.log(`[ONGOING] page ${page} → ${result.length} anime ditemukan`);
   
   return result;
 }

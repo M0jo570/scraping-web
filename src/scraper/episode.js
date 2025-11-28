@@ -1,8 +1,11 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { BASE_URL } = require("../config");
 
-async function scrapeEpisode(url) {
+async function scrapeEpisode(slug) {
   try {
+    const url = `${BASE_URL}/episode/${slug}/`;
+    
     console.log("[EPISODE] Fetching:", url);
 
     const { data } = await axios.get(url, {

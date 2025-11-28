@@ -1,8 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { BASE_URL } = require("../config");
 
 async function scrapeHome() {
-  const url = "https://otakudesu.best/";
+  const url = `${BASE_URL}`;
   const { data } = await axios.get(url, {
     headers: { "User-Agent": "Mozilla/5.0" }
   });

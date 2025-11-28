@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getEpisode } = require("../controllers/episode");
+const { getEpisode } = require("../controllers/anime");
 
 router.get("/:slug", getEpisode);
 

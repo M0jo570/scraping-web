@@ -1,8 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { BASE_URL } = require("../config");
 
 async function scrapeComplete(page = 1) {
-  const url = `https://otakudesu.best/complete-anime/page/${page}/`;
+  const url = `${BASE_URL}/complete-anime/page/${page}/`;
 
   const { data } = await axios.get(url);
   const $ = cheerio.load(data);
