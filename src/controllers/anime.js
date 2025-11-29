@@ -13,7 +13,7 @@ async function getHome(req, res) {
     const data = await scrapeHome();
     res.json({ status: true, data });
   } catch (err) {
-    res.status(500).json({ status: false, error: er.message });
+    res.status(500).json({ status: false, error: err.message });
   }
 }
 
