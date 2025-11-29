@@ -19,14 +19,14 @@ app.get(["/", "/api"], (req, res) => {
 });
 
 // router
-app.use("/api/anime/home", homeRoute);
-app.use("/api/anime/ongoing", ongoingRoute);
-app.use("/api/anime/complete", completeRoute);
-app.use("/api/anime/detail", detailRoute);
-app.use("/api/anime/search", searchRoute);
-app.use("/api/anime/list", animeListRoute);
-app.use("/api/anime/episode", episodeRoute);
-app.use("/api/anime/genres", genreRoute);
-app.use("/api/anime/schedule", scheduleRoute);
+app.use("/anime/home", homeRoute);
+app.use("/anime/ongoing", ongoingRoute);
+app.use("/anime/complete", completeRoute);
+app.use("/anime/detail", detailRoute);
+app.use("/anime/search", searchRoute);
+app.use("/anime/list", animeListRoute);
+app.use("/anime/episode", episodeRoute);
+app.use("/anime/genres", genreRoute);
+app.use("/anime/schedule", scheduleRoute);
 
 module.exports = app;
