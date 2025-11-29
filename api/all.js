@@ -1,5 +1,4 @@
 const app = require("../src/app");
 
-module.exports = (req, res) => {
+module.exports = (req, res) =>
   return app(req, res);
-};

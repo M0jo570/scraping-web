@@ -1,10 +1,9 @@
 {
-  "name": "belajar-backend",
+  "name": "scraping-web",
   "version": "1.0.0",
   "description": "Project ini adalah hasil saya belajar backend jadi ini hanyalah untuk pembelajaran dan saya tidak menyarankan menggunakan nya di public,use this your own risk.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "common",
   "bugs": {
     "url": "https://github.com/M0jo570/belajar-backend/issues"
   },
@@ -22,6 +20,6 @@
     "axios": "^1.13.2",
     "cheerio": "^1.1.2",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "express": "^4.18.2"
   }
 }
