@@ -1,6 +1,6 @@
 # Otakudesu scraping
 
-Project ini adalah hasil saya belajar backend jadi ini hanyalah untuk pembelajaran dan saya tidak menyarankan menggunakan nya di public,use this your own risk.
+NOTE: Project ini adalah hasil saya belajar backend jadi ini hanyalah untuk pembelajaran dan saya tidak menyarankan menggunakan nya di public,use this your own risk.
 
 
 
@@ -22,6 +22,7 @@ jangan lupa membuat .env file dan isi url link di dalam nya.
 
 ```
 BASE_URL=
+PORT=3000
 ```
 
 # server running on port
