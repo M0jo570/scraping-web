@@ -3,9 +3,8 @@ Project ini adalah hasil saya belajar backend jadi ini hanyalah untuk pembelajar
 # install Dependecies
 
 ```
-
 npm install
-
+```
 
 # clone repo
 
